@@ -40,7 +40,7 @@ export default function Page() {
           <div className='flex mt-3 flex-col bg-gray-100 rounded-xl border border-gray-100 shadow-lg shadow-gray-100'>
             <div className='bg-white shadow-sm shadow-gray-200 rounded-t-xl flex p-3 justify-start items-center'>
               <div className='border border-gray-100 rounded-full'>
-                <img src='/prof.png' className='w-12 h-12 object-center rounded-full' />
+                <img alt='project' src='/prof.png' className='w-12 h-12 object-center rounded-full' />
               </div>
               <p className='font-bold ml-3 tracking-tighter text-xl'>Aditya Paluskar</p>
             </div>
@@ -95,7 +95,7 @@ export default function Page() {
           <Card className='shadow-lg shadow-gray-100'>
             <CardContent className='flex flex-col justify-center items-center p-0'>
               <CardHeader className='p-0 w-full relative h-[150px]'>
-                <img src='/ecomm.jpg' className='h-full object-cover object-center rounded-t-md' />
+                <img alt='project' src='/ecomm.jpg' className='h-full object-cover object-center rounded-t-md' />
                 <div className='absolute top-[-7px] left-0 right-0 bottom-0 rounded-t-md bg-black/30 flex justify-center items-center'>
                   <h1 className='font-bold text-center tracking-tighter text-xl text-white mt-0'>Ecommerce<br />Website</h1>
                 </div>
@@ -116,7 +116,7 @@ export default function Page() {
           <Card className='shadow-lg shadow-gray-100'>
             <CardContent className='flex flex-col justify-center items-center p-0'>
               <CardHeader className='p-0 w-full relative h-[150px]'>
-                <img src='/ent.jpg' className='h-full object-cover object-center rounded-t-md' />
+                <img alt='project' src='/ent.jpg' className='h-full object-cover object-center rounded-t-md' />
                 <div className='absolute top-[-7px] left-0 right-0 bottom-0 rounded-t-md bg-black/30 flex justify-center items-center'>
                   <h1 className='font-bold text-center tracking-tighter text-xl text-white mt-0'>Entertainment<br />App</h1>
                 </div>
@@ -137,7 +137,7 @@ export default function Page() {
           <Card className='shadow-lg shadow-gray-100'>
             <CardContent className='flex flex-col justify-center items-center p-0'>
               <CardHeader className='p-0 w-full relative h-[150px]'>
-                <img src='/chat.jpg' className='h-full object-cover object-center rounded-t-md' />
+                <img alt='project' src='/chat.jpg' className='h-full object-cover object-center rounded-t-md' />
                 <div className='absolute top-[-7px] left-0 right-0 bottom-0 rounded-t-md bg-black/30 flex justify-center items-center'>
                   <h1 className='font-bold text-center tracking-tighter text-xl text-white mt-0'>Chat App</h1>
                 </div>
@@ -158,7 +158,7 @@ export default function Page() {
           <Card className='shadow-lg shadow-gray-100'>
             <CardContent className='flex flex-col justify-center items-center p-0'>
               <CardHeader className='p-0 w-full relative h-[150px]'>
-                <img src='/gym.jpg' className='h-full object-cover object-center rounded-t-md' />
+                <img alt='project' src='/gym.jpg' className='h-full object-cover object-center rounded-t-md' />
                 <div className='absolute top-[-7px] left-0 right-0 bottom-0 rounded-t-md bg-black/30 flex justify-center items-center'>
                   <h1 className='font-bold text-center tracking-tighter text-xl text-white mt-0'>Gym Management<br />System</h1>
                 </div>
