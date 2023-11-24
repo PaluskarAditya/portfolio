@@ -90,3 +90,51 @@
     font-size: 40px;
   }
 }
+
+@media (min-width: 640px) {
+  #connect {
+    flex-direction: column;
+    height: 100%;
+  }
+
+  #about {
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .conn {
+    font-size: 40px;
+  }
+}
+
+@media (min-width: 380px) and (max-width: 500px) {
+  #connect {
+    flex-direction: column;
+    height: 100%;
+  }
+
+  #about {
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .conn {
+    font-size: 40px;
+  }
+}
+
+@media (min-width: 500px) {
+  #connect {
+    flex-direction: column;
+    height: 100%;
+  }
+
+  #about {
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .conn {
+    font-size: 40px;
+  }
+}
