@@ -42,7 +42,7 @@ export default function Page() {
               resume
             </Button> */}
           <a href='/' download={'/resume.pdf'}>
-            <Button className='text-xs' variant={'secondary'} size={'sm'} download={'/resume.pdf'} >
+            <Button className='text-xs' variant={'secondary'} size={'sm'} >
               resume
             </Button>
           </a>
