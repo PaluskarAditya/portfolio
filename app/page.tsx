@@ -15,7 +15,7 @@ import { useToast } from '@/components/ui/use-toast';
 export default function Page() {
   const msg = useRef(null)
   const { toast } = useToast();
-  const sendEmail = (e: MouseEvent) => {
+  const sendEmail = (e: SubmitEvent) => {
     e.preventDefault();
     emailjs.sendForm(process.env.SERVICE_ID, process.env.TEMPLATE_ID, msg.current, process.env.PUBLIC_KEY)
       .then((result) => {
