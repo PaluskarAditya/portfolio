@@ -7,8 +7,24 @@ import { Label } from '@/components/ui/label';
 import { ChevronRight, Github, Linkedin, Phone } from 'lucide-react';
 import React, { useRef } from 'react';
 import Image from '@/node_modules/next/image';
+import emailjs from '@emailjs/browser'
+import { Textarea } from '@/components/ui/textarea';
+import Link from '@/node_modules/next/link';
+import { useToast } from '@/components/ui/use-toast';
 
 export default function Page() {
+  const msg = useRef(null)
+  const { toast } = useToast();
+  const sendEmail = (e: MouseEvent) => {
+    e.preventDefault();
+    emailjs.sendForm(process.env.SERVICE_ID, process.env.TEMPLATE_ID, msg.current, process.env.PUBLIC_KEY)
+      .then((result) => {
+        console.log(result.text);
+      }, (error) => {
+        console.log(error.text);
+      });
+  };
+
   return (
     <div className='flex flex-col snap-x w-full'>
       <div id='home' className='snap-center relative from-gray-200 via-white from-10% to-90% bg-gradient-to-b to-white h-screen flex justify-center items-center flex-col'>
@@ -177,44 +193,38 @@ export default function Page() {
           <div className='flex flex-col justify-start items-start p-5 pl-0 gap-3'>
             <div className='cursor-pointer hover:scale-105 transition flex items-center rounded-full shadow-md border-gray-100 border bg-white shadow-gray-100 px-5 py-2'>
               <Linkedin className="w-4 h-5 mr-3" />
-              <p className='text-sm'>Linkedin</p>
+              <p className='text-sm'>
+                <Link href={'https://www.linkedin.com/in/aditya-paluskar-285698265/'} target="_blank" >Linkedin</Link>
+              </p>
             </div>
             <div className='cursor-pointer hover:scale-105 transition flex items-center rounded-full shadow-md border-gray-100 border bg-white shadow-gray-100 px-5 py-2'>
               <Github className="w-4 h-5 mr-3" />
-              <p className='text-sm'>Github</p>
+              <p className='text-sm'><Link href={'https://github.com/PaluskarAditya'} target="_blank" >Github</Link></p>
             </div>
             <div className='cursor-pointer hover:scale-105 transition flex items-center rounded-full shadow-md border-gray-100 border bg-white shadow-gray-100 px-5 py-2'>
               <Phone className="w-4 h-5 mr-3" />
-              <p className='text-sm'>Contact</p>
+              <p className='text-sm' onClick={() => toast({ title: "Here's my contact...", description: "8828061672" })}>Contact</p>
             </div>
           </div>
         </div>
         <div className='flex flex-1 justify-start items-center p-10'>
-          <Card className='w-full sm:p-0 lg:p-1'>
-            <CardHeader>
-              <CardTitle className='font-bold tracking-tighter text-2xl'>Message me</CardTitle>
-              <CardDescription>
-                directly reach me out at my inbox.
-              </CardDescription>  
-            </CardHeader>
-            <CardContent className="space-y-2">
-              <div className="space-y-1">
-                <Label htmlFor="name">Name</Label>
-                <Input id="name" defaultValue="" placeholder='Pedro Duarte' />
-              </div>
-              <div className="space-y-1">
-                <Label htmlFor="username">Email</Label>
-                <Input id="username" defaultValue="" placeholder='peduarte@gmail.com' type={'email'}/>
-              </div>
-              <div className="space-y-1">
-                <Label htmlFor="username">Message</Label>
-                <Input id="username" defaultValue="" placeholder='enter your message...' />
-              </div>
-            </CardContent>
-            <CardFooter>
-              <Button>send message</Button>
-            </CardFooter>
-          </Card>
+          <form onSubmit={sendEmail} ref={msg} className='p-5 bg-white rounded-md border w-full border-gray-100'>
+            <h1 className='font-bold tracking-tighter text-2xl'>Message me</h1>
+            <p className='text-gray-500 text-sm mb-5'>directly reach me out at my inbox.</p>
+            <div className="space-y-1">
+              <Label htmlFor="name">Name</Label>
+              <Input name='to_name' id="name" defaultValue="" placeholder='Pedro Duarte' />
+            </div>
+            <div className="space-y-1">
+              <Label htmlFor="username">Email</Label>
+              <Input name='to_email' id="username" defaultValue="" placeholder='peduarte@gmail.com' type={'email'} />
+            </div>
+            <div className="space-y-1">
+              <Label htmlFor="username">Message</Label>
+              <Textarea name='message' className='max-h-[154px]' id='message' placeholder='enter your message...' />
+            </div>
+            <Button type='submit' className='mt-5'>send message</Button>
+          </form>
         </div>
       </div>
     </div>
