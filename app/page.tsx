@@ -13,7 +13,7 @@ import Link from '@/node_modules/next/link';
 import { useToast } from '@/components/ui/use-toast';
 
 export default function Page() {
-  const msg = useRef(null)
+  const msg = useRef<HTMLFormElement>(null)
   const { toast } = useToast();
   const sendEmail = (e: SubmitEvent) => {
     e.preventDefault();
