@@ -169,7 +169,7 @@ export default function Page() {
         </div>
         <p className='text-sm text-gray-600 cursor-pointer pb-3 '>more projects <ChevronRight className="inline-block w-4 h-4" /></p>
       </div>
-      <div id='connect' className='flex lg:flex-row sm:flex-col justify-center items-center h-screen bg-gradient-to-b from-white via-white to-90% to-gray-200'>
+      <div id='connect' className='flex justify-center items-center h-screen bg-gradient-to-b from-white via-white to-90% to-gray-200'>
         <div className='flex justify-end items-center flex-1'>
           <div className='flex justify-end items-end p-7'>
             <h1 className='conn font-black text-right text-7xl tracking-tighter'>Connect <br />with me</h1>
