@@ -17,7 +17,7 @@ export default function Page() {
   const { toast } = useToast();
   const sendEmail = (e: SubmitEvent) => {
     e.preventDefault();
-    emailjs.sendForm("service_qb5qws5", "template_i4iv8gb", msg.current, "w33t9a3FXSNG3MgFN");
+    emailjs.sendForm("service_qb5qws5", "template_i4iv8gb", msg.current, "w33t9a3FXSNG3MgFN")
       .then((result) => {
         console.log(result.text);
       }, (error) => {
