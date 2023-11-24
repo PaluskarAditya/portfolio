@@ -5,25 +5,14 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { ChevronRight, Github, Linkedin, Phone } from 'lucide-react';
-import { useScroll, useTransform, motion } from 'framer-motion'
 import React, { useRef } from 'react';
 import Image from '@/node_modules/next/image';
 
 export default function Page() {
-  const ref = useRef<HTMLDivElement>(null);
-
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ['end end', 'end start']
-  });
-
-  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
-  const scale = useTransform(scrollYProgress, [0, 0.5], [1, 0.8]);
-
   return (
-    <motion.div className='flex flex-col snap-x' ref={ref}>
-      <div id='home' style={{scale}} className='snap-center relative from-gray-200 via-white from-10% to-90% bg-gradient-to-b to-white h-screen flex justify-center items-center flex-col'>
-        <motion.h1 style={{scale}} className='font-black tracking-tighter text-6xl z-10'>Aditya Paluskar</motion.h1>
+    <div className='flex flex-col snap-x'>
+      <div id='home' className='snap-center relative from-gray-200 via-white from-10% to-90% bg-gradient-to-b to-white h-screen flex justify-center items-center flex-col'>
+        <h1 className='font-black tracking-tighter text-6xl z-10'>Aditya Paluskar</h1>
         <p className='text-sm mt-1 z-10'>Hello &#128075;, I am Aditya. Full Stack Web Developer & Programmer.</p>
         <p className='font-black text-[10vw] absolute z-0 text-gray-100/10 drop-shadow-sm'>Web Developer</p>
         <div className='z-10 mt-2 gap-2 flex justify-center items-center'>
@@ -35,7 +24,7 @@ export default function Page() {
           </Button>
         </div>
       </div>
-      <motion.div id='about' style={{opacity}} className='snap-center h-screen flex justify-center items-center'>
+      <div id='about' className='snap-center h-screen flex justify-center items-center'>
         <div className='flex-1 flex flex-col shrink p-7 w-[50-vw]'>
           <h1 className='font-bold tracking-tighter text-4xl'>About me</h1>
           <div className='flex mt-3 flex-col bg-gray-100 rounded-xl border border-gray-100 shadow-lg shadow-gray-100'>
@@ -89,7 +78,7 @@ export default function Page() {
             <p className='text-center tracking-tighter text-sm mt-2'>to be continued...</p>
           </div>
         </div>
-      </motion.div>
+      </div>
       <div id='projects' className='flex flex-col justify-start items-center pt-[90px]'>
         <h1 className='font-bold tracking-tighter text-4xl mb-0'>Projects</h1>
         <div className='grid grid-cols-2 gap-5 p-7 max-w-[700px]'>
@@ -228,6 +217,6 @@ export default function Page() {
           </Card>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }
