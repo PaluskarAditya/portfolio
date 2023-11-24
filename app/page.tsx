@@ -50,7 +50,7 @@ export default function Page() {
                 <p className='text-sm'>Hey there, I am Aditya Paluskar based in Mumbai, India.</p>
               </div>
               <div className='rounded-r-full flex  flex-wrap shrink mt-2 px-4 bg-white p-2 shadow-lg shadow-gray-100/50'>
-                <p className='text-sm'>A Full Stack Web Developer currently pursuing my undergraduate's <b>B.C.A</b> degree.</p>
+                <p className='text-sm'>A Full Stack Web Developer currently pursuing my undergraduate&apos;s <b>B.C.A</b> degree.</p>
               </div>
               <div className='rounded-full flex shrink flex-wrap mt-2 rounded-tl-none px-4 bg-white p-2 shadow-lg shadow-gray-100/50'>
                 <p className='text-sm'>Always willing to learn new technologies in the tech industry and implement them for betterment.</p>
@@ -65,7 +65,7 @@ export default function Page() {
               </div>
               <div className='flex justify-end items-center'>
                 <div className='bg-blue-700 rounded-full rounded-br-none mt-2 px-3 p-2 shadow-lg shadow-gray-100/50'>
-                  <p className='text-white text-sm'>That's really awesome &lt;3 </p>
+                  <p className='text-white text-sm'>That&apos;s really awesome &lt;3 </p>
                 </div>
               </div>
             </div>
@@ -76,11 +76,11 @@ export default function Page() {
           <div className='flex flex-col gap-4 w-[90%]'>
             <div className='bg-gray-100 rounded-md w-full p-3 shadow-lg shadow-gray-100/50'>
               <p className='text-xl font-medium tracking-tighter'>SSC</p>
-              <p className='text-sm tracking-tighter flex justify-between items-center'>St. Anthony's High School <span className='font-medium'>2020</span></p>
+              <p className='text-sm tracking-tighter flex justify-between items-center'>St. Anthony&apos;s High School <span className='font-medium'>2020</span></p>
             </div>
             <div className='bg-gray-100 rounded-md w-full p-3 shadow-lg shadow-gray-100/50'>
               <p className='text-xl font-medium tracking-tighter'>HSC</p>
-              <p className='text-sm tracking-tighter flex justify-between items-center'>Chetana's college of Commerce & Arts<span className='font-medium'>2022</span></p>
+              <p className='text-sm tracking-tighter flex justify-between items-center'>Chetana&apos;s college of Commerce & Arts<span className='font-medium'>2022</span></p>
             </div>
             <div className='bg-gray-100 rounded-md w-full p-3 shadow-lg shadow-gray-100/50'>
               <p className='text-xl font-medium tracking-tighter'>BCA CS</p>
@@ -123,7 +123,7 @@ export default function Page() {
                 </div>
               </CardHeader>
               <CardDescription className='p-6 pb-0 tracking-tighter text-center'>
-                Ecommerce website built with NextJS, Tailwind CSS, MongoDB, Express, Redux Toolkit.
+                Entertainment app like YouTube built with NextJS, Tailwind CSS, MongoDB, Express, Redux Toolkit.
               </CardDescription>
               <CardFooter className='mt-6 flex gap-2'>
                 <Button className='text-xs' size={'sm'} variant={'outline'}>
@@ -144,7 +144,7 @@ export default function Page() {
                 </div>
               </CardHeader>
               <CardDescription className='p-6 pb-0 tracking-tighter text-center'>
-                Ecommerce website built with NextJS, Tailwind CSS, MongoDB, Express, Redux Toolkit.
+                Chatting Application built with NextJS, Tailwind CSS, MongoDB, Express, Redux Toolkit.
               </CardDescription>
               <CardFooter className='mt-6 flex gap-2'>
                 <Button className='text-xs' size={'sm'} variant={'outline'}>
@@ -165,7 +165,7 @@ export default function Page() {
                 </div>
               </CardHeader>
               <CardDescription className='p-6 pb-0 tracking-tighter text-center'>
-                Ecommerce website built with NextJS, Tailwind CSS, MongoDB, Express, Redux Toolkit.
+                Gym Management System built with NextJS, Tailwind CSS, MongoDB, Express, Redux Toolkit.
               </CardDescription>
               <CardFooter className='mt-6 flex gap-2'>
                 <Button className='text-xs' size={'sm'} variant={'outline'}>
