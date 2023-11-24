@@ -75,7 +75,7 @@
   }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 390px) {
   #connect {
     flex-direction: column;
     height: 100%;
