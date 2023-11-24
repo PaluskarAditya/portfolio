@@ -10,10 +10,10 @@ import Image from '@/node_modules/next/image';
 
 export default function Page() {
   return (
-    <div className='flex flex-col snap-x'>
+    <div className='flex flex-col snap-x w-full'>
       <div id='home' className='snap-center relative from-gray-200 via-white from-10% to-90% bg-gradient-to-b to-white h-screen flex justify-center items-center flex-col'>
-        <h1 className='font-black tracking-tighter text-6xl z-10'>Aditya Paluskar</h1>
-        <p className='text-sm mt-1 z-10'>Hello &#128075;, I am Aditya. Full Stack Web Developer & Programmer.</p>
+        <h1 className='font-black tracking-tighter text-6xl z-10 text-center'>Aditya Paluskar</h1>
+        <p className='text-sm mt-1 z-10 text-center'>Hello &#128075;, I am Aditya. Full Stack Web Developer & Programmer.</p>
         <p className='font-black text-[10vw] absolute z-0 text-gray-100/10 drop-shadow-sm'>Web Developer</p>
         <div className='z-10 mt-2 gap-2 flex justify-center items-center'>
           <Button className='text-xs' variant={'secondary'} size={'sm'} >
@@ -24,7 +24,7 @@ export default function Page() {
           </Button>
         </div>
       </div>
-      <div id='about' className='snap-center h-screen flex justify-center items-center'>
+      <div id='about' className='snap-center h-screen flex flex-row justify-center items-center'>
         <div className='flex-1 flex flex-col shrink p-7 w-[50-vw]'>
           <h1 className='font-bold tracking-tighter text-4xl'>About me</h1>
           <div className='flex mt-3 flex-col bg-gray-100 rounded-xl border border-gray-100 shadow-lg shadow-gray-100'>
@@ -81,7 +81,7 @@ export default function Page() {
       </div>
       <div id='projects' className='flex flex-col justify-start items-center pt-[90px]'>
         <h1 className='font-bold tracking-tighter text-4xl mb-0'>Projects</h1>
-        <div className='grid grid-cols-2 gap-5 p-7 max-w-[700px]'>
+        <div className='grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-5 p-7 max-w-[700px]'>
           <Card className='shadow-lg shadow-gray-100'>
             <CardContent className='flex flex-col justify-center items-center p-0'>
               <CardHeader className='p-0 w-full relative h-[150px]'>
@@ -169,10 +169,10 @@ export default function Page() {
         </div>
         <p className='text-sm text-gray-600 cursor-pointer pb-3 '>more projects <ChevronRight className="inline-block w-4 h-4" /></p>
       </div>
-      <div id='connect' className='flex justify-center items-center h-screen bg-gradient-to-b from-white via-white to-90% to-gray-200'>
+      <div id='connect' className='flex lg:flex-row sm:flex-col justify-center items-center h-screen bg-gradient-to-b from-white via-white to-90% to-gray-200'>
         <div className='flex justify-end items-center flex-1'>
           <div className='flex justify-end items-end p-7'>
-            <h1 className='font-black text-right text-7xl tracking-tighter'>Connect <br />with me</h1>
+            <h1 className='conn font-black text-right text-7xl tracking-tighter'>Connect <br />with me</h1>
           </div>
           <div className='flex flex-col justify-start items-start p-5 pl-0 gap-3'>
             <div className='cursor-pointer hover:scale-105 transition flex items-center rounded-full shadow-md border-gray-100 border bg-white shadow-gray-100 px-5 py-2'>
@@ -190,7 +190,7 @@ export default function Page() {
           </div>
         </div>
         <div className='flex flex-1 justify-start items-center p-10'>
-          <Card className='w-full'>
+          <Card className='w-full sm:p-0 lg:p-1'>
             <CardHeader>
               <CardTitle className='font-bold tracking-tighter text-2xl'>Message me</CardTitle>
               <CardDescription>

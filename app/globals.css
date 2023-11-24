@@ -74,3 +74,19 @@
     @apply bg-background text-foreground;
   }
 }
+
+@media (max-width: 375px) {
+  #connect {
+    flex-direction: column;
+    height: 100%;
+  }
+
+  #about {
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .conn {
+    font-size: 40px;
+  }
+}
