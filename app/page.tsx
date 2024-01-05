@@ -155,7 +155,7 @@ export default function Page() {
           <h1 className='font-bold tracking-tighter text-4xl mb-0'>Projects</h1>
           <motion.div className='grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-5 p-7 max-w-[700px]'>
             {
-              projects.map(el => <motion.div style={{ scale, duration: .25 }}><Card key={el.id} className='shadow-lg shadow-gray-100'>
+              projects.map(el => <motion.div style={{ scale }} key={el.id}><Card className='shadow-lg shadow-gray-100'>
                 <CardContent className='flex flex-col justify-center items-center p-0'>
                   <CardHeader className='p-0 w-full relative h-[150px]'>
                     <Image height={1000} width={1000} alt='project' src={el.thumb} className='h-full object-cover object-center rounded-t-md' />
